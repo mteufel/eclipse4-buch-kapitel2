@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application
+ xmi:version="2.0"
+ xmlns:xmi="http://www.omg.org/XMI"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic"
+ xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" 
+ xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" >
+  
+ <addons elementId="org.eclipse.e4.core.commands.service"
+   contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon" />
+   
+ <addons elementId="org.eclipse.e4.ui.contexts.service"
+   contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon" />
+
+ <addons elementId="org.eclipse.e4.ui.bindings.service"
+   contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon" />
+   
+ <addons elementId="org.eclipse.e4.ui.workbench.commands.model" 
+   contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon" />
+
+ <addons elementId="org.eclipse.e4.ui.workbench.contexts.model"
+   contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon" />
+
+ <addons elementId="org.eclipse.e4.ui.workbench.bindings.model"
+   contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon" />
+
+ <handlers elementId="net.teufel.e4.helloworld.handlers.exitHandler"
+   contributionURI="bundleclass://net.teufel.e4.helloworld.ui/net.teufel.e4.helloworld.handlers.ExitHandler"
+   command="_1" />
+   
+ <commands xmi:id="_1" elementId="net.teufel.e4.helloworld.exitCommand"
+   commandName="ExitCommand" /> 
+  
+  <children xsi:type="basic:TrimmedWindow" label="Hello World" width="640" height="480">
+  
+	<children xsi:type="basic:Part"
+		elementId="MyFirstPart"
+		contributionURI="bundleclass://net.teufel.e4.helloworld.ui/net.teufel.e4.helloworld.ui.MyFirstPart" />
+  
+    <trimBars>
+      <children xsi:type="menu:ToolBar">
+        <children xsi:type="menu:HandledToolItem"
+           elementId="net.teufel.e4.hellworld.toolitems.exitToolItem" 
+           label="Beenden"
+           iconURI="platform:/plugin/net.teufel.e4.helloworld.ui/icons/door_out.png"
+           command="_1" />
+      </children>
+    </trimBars>
+  
+  </children>
+
+</application:Application>
