@@ -28,7 +28,9 @@
  <handlers elementId="net.teufel.e4.helloworld.handlers.exitHandler"
    contributionURI="bundleclass://net.teufel.e4.helloworld.ui/net.teufel.e4.helloworld.handlers.ExitHandler"
    command="_1" />
-   
+ 
+ <addons xmi:id="_gf2ooN_cEeKCQoN9if4ToQ" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>  
+ 
  <commands xmi:id="_1" elementId="net.teufel.e4.helloworld.exitCommand"
    commandName="ExitCommand" /> 
   
